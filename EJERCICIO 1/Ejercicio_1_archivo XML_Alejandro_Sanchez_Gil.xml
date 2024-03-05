@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<examenes>
+    <materia>
+        <nombre>Lenguaje de marcas</nombre>
+        <aprobados>15</aprobados>
+        <suspensos>10</suspensos>
+        <unidades>4</unidades>
+        </materia>
+    <materia>
+        <nombre>Sistemas Operativos</nombre>
+        <aprobados>5</aprobados>
+        <suspensos>20</suspensos>
+        <unidades>5</unidades>
+        </materia>
+    <materia>
+        <nombre>Entornos de Desarrollo</nombre>
+        <aprobados>17</aprobados>
+        <suspensos>8</suspensos>
+        <unidades>6</unidades>
+        </materia>
+</examenes>
+<!--FUNCIONA CORRECTAMENTE-->
+<!--EJERCICIO 2-->
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <!--vamos a crear un contacto-->
+    <contactos>
+        <nombre>Alumno</nombre>
+        <ciudad cp="15500">Ciudad Real </ciudad>
+        <telefono n="612345678"/>
+        <email>alumno@gmail.com</email>
+        <casado v="no"/>
+    </contactos>
+</agenda>
+
+<!--EJERCICIO 3-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--Aqui encontramos un error y es que la codificación UTF-8 no están en mayúsculas, simplemente las ponemos en mayúscula-->
+
+<agenda>
+	<!--Vamos a crear un contacto-->
+	<contactos>
+		<nombre>Alumno</nombre>
+		<Ciudad cp="15500">Ciudad Real</ciudad>
+        <!--El error aquí es que la etiqueta Ciudad no esta escrita igual en ambas etiquetas
+        se soluciona poniendo el mismo nombre-->
+		<teléfono n="612345678"/>
+		<email>alumno@gmail.com</email>
+		<casado v="no"> <!--En esta línea encontramos otro error y es la ausencia de la etiqueta
+        de cierre, se solucionaria simplemente cerrando la etiqueta-->
+		<@AsignaturaPreferida>Matemáticas</@>
+        <!--El error aqui es que la @ no es un nombre valido para una etiqueta por lo que
+        para solucionarlo solo tenemos que indicar como nombre de la etiqueta otra cosa-->
+	</contactos>
+</agenda>
+<!--EJERCICIO 3 CORREGIDO-->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<agenda>
+	<!--Vamos a crear un contacto-->
+	<contactos>
+		<nombre>Alumno</nombre>
+		<Ciudad cp="15500">Ciudad Real</Ciudad>
+		<teléfono n="612345678"/>
+		<email>alumno@gmail.com</email>
+		<casado v="no"/>
+		<AsignaturaPreferida>Matemáticas</AsignaturaPreferida>
+	</contactos>
+</agenda>
